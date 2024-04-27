@@ -3650,7 +3650,7 @@ ui:SetupLoader({time = 2})
 --
 Wait(2)
 --
-local Window = ui:NewWindow{window = {Name = [[<b>kaz.<font color="rgb(220, 20, 60)">skids💯</font></b>]], Description = "kaz was here😘", User = {Name = LocalPlayer.Name,Role = 'kazs skidded test🫡'}}
+local Window = ui:NewWindow{window = {Name = [[<b>kaz.<font color="rgb(220, 20, 60)">skids💯</font></b>]], Description = 'kaz was here😘', User = {Name = LocalPlayer.Name,Role = 'kazs skidded test🫡'}}
 local flags = Window.flags
 -- Functions , Renders 
 local Backtrack = Instance.new("Folder")
