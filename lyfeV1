@@ -6836,7 +6836,7 @@ worldVisuals:Toggle({ Name = "Time of Day", Pointer = ")timeofday", callback = f
     end
 end})
 worldVisuals:Slider({ Name = "Time of Day (hr)", min = 1, max = 24, def = 12, suffix = "hr", pointer = ")timeofday)" })
-combatVisuals:Label({ Name = "< Aim Assist >" })
+combatVisuals:Label({ Name = "Aim Assist" })
 
 local aimassistShowFOV = combatVisuals:Toggle({ Name = "Show FOV", Pointer = "%showfov", callback = function(state)
     aimassist__drawing["inner"].Visible = state
@@ -6844,7 +6844,7 @@ local aimassistShowFOV = combatVisuals:Toggle({ Name = "Show FOV", Pointer = "%s
 end})
 aimassistShowFOV:Colorpicker({ Info = "Aim Assist FOV", Default = Color3.fromRGB(255,0,0), Pointer = "%showfovcolor"})
 aimassistShowFOV:Colorpicker({ Info = "Aim Assist FOV Outline", Default = Color3.fromRGB(0, 0, 0), Pointer = "%showfovcoloroutline"})
-combatVisuals:Label({ Name = "< Silent Aim >" })
+combatVisuals:Label({ Name = "Silent Aim" })
 local silentaimShowFOV = combatVisuals:Toggle({ Name = "Show FOV", Pointer = "!showfov", callback = function(state)
     silentaim__drawing["inner"].Visible = state
     silentaim__drawing["outer"].Visible = state
@@ -6853,7 +6853,7 @@ silentaimShowFOV:Colorpicker({ Info = "Silent Aim FOV", Default = Color3.fromRGB
 silentaimShowFOV:Colorpicker({ Info = "Silent Aim FOV Outline", Default = Color3.fromRGB(0, 0, 0), Pointer = "!showfovcoloroutline"})
 local silentaimLine = combatVisuals:Toggle({ Name = "Line", Pointer = "!line" })
 silentaimLine:Colorpicker({ Info = "Color", Default = Color3.fromRGB(255,255,255), Pointer = "!linecolor"})
-combatVisuals:Label({ Name = "< Target Aim >" }) 
+combatVisuals:Label({ Name = "Target Aim" }) 
 local targetaimShowFOV = combatVisuals:Toggle({ Name = "Show FOV", Pointer = "#showfov", callback = function(state)
     targetaim__drawing["inner"].Visible = state
     targetaim__drawing["outer"].Visible = state
