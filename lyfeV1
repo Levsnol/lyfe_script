@@ -1,10 +1,4 @@
 --[[
-    >rinichi >> did 50% of the work
-    >weda >> did 50% of the work
-
-    >fixed by desktop
-]]
---[[
 if getgenv().azureloaded then
     return
 end
@@ -5861,7 +5855,7 @@ return library, library.pointers, theme
 end
 
 local library = retlibrary():New({ 
-    Name = "Azure - Beta",
+    Name = "Lyfe - Beta",
     Size = Vector2.new(550,601)
 })
 
@@ -7378,13 +7372,13 @@ settingsMenu:Keybind({ Name = "Toggle",Default = Enum.KeyCode.RightShift, Pointe
     library:ChangeUIBind(chosen)
 end})
 settingsMenu:Label({ Name = "Custom Menu Name" })
-settingsMenu:Textbox({Text = "Azure", PlaceHolder = "Custom Menu Name", Pointer = "custommenuname", Middle = false, ResetOnFocus = false, callback = function(name)
+settingsMenu:Textbox({Text = "Lyfe", PlaceHolder = "Custom Menu Name", Pointer = "custommenuname", Middle = false, ResetOnFocus = false, callback = function(name)
     library:Retitle(name)
 end})
 settingsMenu:Toggle({Name = "Watermark", Default = false, Pointer = "watermark", callback = function(boolean)
     library.watermark:Update("Visible", boolean)
 end})
-settingsMenu:Textbox({Text = "Azure | {fps} | {ping} | {time} | {date}", PlaceHolder = "Watermark Data",Pointer = "watermarkData", Middle = false, ResetOnFocus = false})
+settingsMenu:Textbox({Text = "Lyfe V1 | {fps} | {ping} | {time} | {date}", PlaceHolder = "Watermark Data",Pointer = "watermarkData", Middle = false, ResetOnFocus = false})
 
 local settingsTheme = pageSettings:Section({ Name = "Theme", Side = "Right" })
 settingsTheme:Dropdown({Name = "Themes", Pointer = "themedropdown", Options = {"Default","Snowy","Salmon","Bitch Bot","Kiriot Hub","Fatality","Red","Tokyo Night","Old Abyss","Onetap","NeverLose","Gamesense","Vape","Spotify","Zeebot v2","LegitSneeze","Abyss V2"}, Default = "Default", callback = function(selected)
@@ -7947,4 +7941,4 @@ end)
 --// desktop fixed this btw
 if library:Initialize() then library:Initialize() end
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "azure (temporary notif)",Text = string.format("Took %ss", math.round((tick() - loadtick)) * 1000 / 1000),Duration = 3.6})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Lyfe V1 ",Text = string.format("Took %ss to load", math.round((tick() - loadtick)) * 1000 / 1000),Duration = 3.6})
