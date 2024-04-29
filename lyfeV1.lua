@@ -6627,7 +6627,7 @@ targetaimCombat:Label({ Name = "Prediction" })
 targetaimCombat:Textbox({Text = "0.15", PlaceHolder = "Prediction", Pointer = "#prediction", Middle = false, ResetOnFocus = false})
 
 local pageVisuals = library:Page({ Name = "Visuals" })
-local Visuals = pageVisuals:Section({ Name = "" })
+local espVisuals = pageVisuals:Section({ Name = "Esp" })
 local esp__events = event.new("esp__events")
 
 espVisuals:Toggle({ Name = "Enabled", Default = false, Pointer = "^enabled", callback = function(state)
