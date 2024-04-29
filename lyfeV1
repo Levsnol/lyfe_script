@@ -7165,7 +7165,7 @@ local function autobuyFunction(name)
    autobuyBoolean = false
 end
 
-autobuyMisc:Toggle({Name = "Auto Buy", Default = false, Pointer = "autobuyActive", callback = function(bool)
+autobuyMisc:Toggle({Name = "Auto Buy (BROKEN WAIT FOR UPDATE)", Default = false, Pointer = "autobuyActive", callback = function(bool)
     if bool and character.isAlive() then
         shared.currentPosition = localplayer.Character.HumanoidRootPart.CFrame
         if character.isAlive() then
