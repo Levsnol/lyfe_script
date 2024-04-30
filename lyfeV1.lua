@@ -64,9 +64,9 @@ getgenv().library = {
     ended = {},
     colors = {},
     folders = {
-        main = "azure",
-        assets = "azure/assets",
-        configs = "azure/configs"
+        main = "lyfe",
+        assets = "lyfe/assets",
+        configs = "lyfe/configs"
     },
     shared = {
         initialized = false,
@@ -6057,9 +6057,9 @@ getgenv().config = {}
 function config:getFolder()
     local array = {}
 
-    for i, v in next, listfiles("azure/configs") do
+    for i, v in next, listfiles("lyfe/configs") do
         local filename = v
-        local result = string.gsub(filename,"azure/configs.*\\","")
+        local result = string.gsub(filename,"lyfe/configs.*\\","")
         table.insert(array, result)
     end
     return array
@@ -7399,15 +7399,15 @@ settingsConfig:Textbox({Text = "", PlaceHolder = "Config Name", Middle = true, R
     shared.ConfigName = string
 end})
 settingsConfig:Button({Name = "Save",confirmation = true, Callback = function()
-    writefile("azure/configs/" .. shared.ConfigName, library:GetConfig())
+    writefile("lyfe/configs/" .. shared.ConfigName, library:GetConfig())
     savedconfigsDropdown:Refresh(config:getFolder())
 end})
 settingsConfig:Button({Name = "Load",confirmation = true, Callback = function() 
-    library:LoadConfig(readfile("azure/configs/" .. shared.SelectedCFG))
+    library:LoadConfig(readfile("lyfe/configs/" .. shared.SelectedCFG))
 end})
 settingsConfig:Button({Name = "Delete",confirmation = true, Callback = function() 
-    if isfile("azure/configs/" .. shared.SelectedCFG) then
-        delfile("azure/configs/" .. shared.SelectedCFG)
+    if isfile("lyfe/configs/" .. shared.SelectedCFG) then
+        delfile("lyfe/configs/" .. shared.SelectedCFG)
         savedconfigsDropdown:Refresh(config:getFolder())
         savedconfigsDropdown:set("")
     end
