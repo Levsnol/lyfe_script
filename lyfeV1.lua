@@ -7127,7 +7127,7 @@ soundsMisc:Dropdown({Name = "Shoot Sound", Options = {'Bameware', 'Bell', 'Bubbl
     elseif chosen == "Skeet" then
         shoot__assetid__audio = 5633695679
     elseif chosen == "Neverlose" then
-        shoot__assetid__audio = 6534948092
+        shoot__assetid__audio = 8679627751
     elseif chosen == "Minecraft" then
         shoot__assetid__audio = 4018616850
     end
