@@ -7074,7 +7074,7 @@ exploitsMisc:Toggle({Name = "Anti-Aimviewer (beta)", Default = false, Pointer = 
 exploitsMisc:Toggle({Name = "No Jump Cooldown", Default = false, Pointer = "nojumpcooldownenabled"})
 exploitsMisc:Toggle({Name = "No Slowdown", Default = false, Pointer = "noslowdownenabled"})
 
-
+local soundsMisc = pageMisc:MultiSection({ Sections = {"Sounds"}, Side = "Right" })
 local shoot__assetid__audio = "3124331820"
 soundsMisc:Toggle({Name = "Custom Shoot Sound", Default = false, Pointer = "customshootsound", callback = function(enabled)
     if enabled then
