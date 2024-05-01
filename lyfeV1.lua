@@ -7074,7 +7074,7 @@ exploitsMisc:Toggle({Name = "Anti-Aimviewer (beta)", Default = false, Pointer = 
 exploitsMisc:Toggle({Name = "No Jump Cooldown", Default = false, Pointer = "nojumpcooldownenabled"})
 exploitsMisc:Toggle({Name = "No Slowdown", Default = false, Pointer = "noslowdownenabled"})
 
-
+-[[
 local shoot__assetid__audio = "3124331820"
 soundsMisc:Toggle({Name = "Custom Shoot Sound", Default = false, Pointer = "customshootsound", callback = function(enabled)
     if enabled then
@@ -7132,7 +7132,7 @@ soundsMisc:Dropdown({Name = "Shoot Sound", Options = {'Bameware', 'Bell', 'Bubbl
         shoot__assetid__audio = 4018616850
     end
 end})
-]]
+ --]]
 local worldMisc, autobuyMisc = pageMisc:MultiSection({ Sections = {"TP (beta)", "Autobuy (broken)"}, Side = "right", size = 260 });
 worldMisc:Dropdown({Name = "World", Options = {"Baseplate"}, Default = "Baseplate", Pointer = "worldType"})
 worldMisc:Button({Name = "Teleport", callback = function()
