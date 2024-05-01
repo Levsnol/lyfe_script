@@ -7132,7 +7132,7 @@ soundsMisc:Dropdown({Name = "Shoot Sound", Options = {'Bameware', 'Bell', 'Bubbl
         shoot__assetid__audio = 4018616850
     end
 end})
- --]]
+ 
 local worldMisc, autobuyMisc = pageMisc:MultiSection({ Sections = {"TP (beta)", "Autobuy (broken)"}, Side = "right", size = 260 });
 worldMisc:Dropdown({Name = "World", Options = {"Baseplate"}, Default = "Baseplate", Pointer = "worldType"})
 worldMisc:Button({Name = "Teleport", callback = function()
