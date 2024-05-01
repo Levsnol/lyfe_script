@@ -7070,11 +7070,11 @@ end})
 movementMisc:Slider({Name = "Bunny Hop Speed", Minimum = 25, Maximum = 150, Default = 25, Decimals = 0.1, Suffix = "", Pointer = "bhop_speed"})
 
 local exploitsMisc = pageMisc:MultiSection({ Sections = {"Exploits"}, Side = "Right" })
---exploitsMisc:Toggle({Name = "Anti-Aimviewer", Default = false, Pointer = "antiaimviewerenabled"})
+exploitsMisc:Toggle({Name = "Anti-Aimviewer (beta)", Default = false, Pointer = "antiaimviewerenabled"})
 exploitsMisc:Toggle({Name = "No Jump Cooldown", Default = false, Pointer = "nojumpcooldownenabled"})
 exploitsMisc:Toggle({Name = "No Slowdown", Default = false, Pointer = "noslowdownenabled"})
 
---[[
+
 local shoot__assetid__audio = "3124331820"
 soundsMisc:Toggle({Name = "Custom Shoot Sound", Default = false, Pointer = "customshootsound", callback = function(enabled)
     if enabled then
@@ -7133,7 +7133,7 @@ soundsMisc:Dropdown({Name = "Shoot Sound", Options = {'Bameware', 'Bell', 'Bubbl
     end
 end})
 ]]
-local worldMisc, autobuyMisc = pageMisc:MultiSection({ Sections = {"World", "Autobuy"}, Side = "right", size = 260 });
+local worldMisc, autobuyMisc = pageMisc:MultiSection({ Sections = {"TP (beta)", "Autobuy (broken)"}, Side = "right", size = 260 });
 worldMisc:Dropdown({Name = "World", Options = {"Baseplate"}, Default = "Baseplate", Pointer = "worldType"})
 worldMisc:Button({Name = "Teleport", callback = function()
     if library.pointers.worldType:get() == "Baseplate" then
@@ -7665,7 +7665,7 @@ silentaimEvent:bindConnection(runservice.Heartbeat, "!silentaimConnection4", LPH
     else
         silentaim__drawing.line.Visible = false
     end
-    --[[
+    
     if library.pointers["!enabled"]:get() and library.pointers["!autoresolver"]:get() then
         if silentaimPlayer ~= nil and silentaimPlayer.player ~= nil and silentaimPlayer.player.Character ~= nil and aimbot.isAlive(silentaimPlayer.player) then
             if silentaimPlayer.player.Character["HumanoidRootPart" or "Head"].Velocity.Magnitude > 19 then 
