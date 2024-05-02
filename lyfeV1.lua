@@ -7394,7 +7394,7 @@ settingsTheme:Colorpicker({Name = "Outline", Info = "Outline", Default = Color3.
 settingsTheme:Colorpicker({Name = "Inline", Info = "Inline", Default = Color3.fromRGB(50,50,50), Pointer = "uiinline", callback = function(color) library:UpdateColor("inline", color) end})
 settingsTheme:Colorpicker({Name = "Text Color", Info = "Text Color", Default = Color3.fromRGB(255,255,255), Pointer = "uitextcolor", callback = function(color) library:UpdateColor("textcolor", color) end})
 settingsTheme:Colorpicker({Name = "Text Border", Info = "Text Border", Default = Color3.fromRGB(0,0,0), Pointer = "uitextborder", callback = function(color) library:UpdateColor("textborder", color) end})
-local settingsConfig = pageSettings:Section({ Name = "Configs", Side = "Right" })
+local settingsConfig = pageSettings:Section({ Name = "Config", Side = "Right" })
 
 local savedconfigsDropdown = settingsConfig:Dropdown({Name = "Saved Configs", Options = config:getFolder(), Default = "", callback = function(string) shared.SelectedCFG = string end})
 settingsConfig:Label({Name = "Config Name"})
