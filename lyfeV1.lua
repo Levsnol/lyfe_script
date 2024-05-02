@@ -6600,7 +6600,7 @@ aimassistCombat:Dropdown({ Name = "Movement Type", Options = { "Camera", "Mouse"
 aimassistCombat:Slider({ Name = "Smoothing X", min = 0.0001, max = 1, def = 1, decimals = 0.0001, pointer = "%smoothingX"})
 aimassistCombat:Slider({ Name = "Smoothing Y", min = 0.0001, max = 1, def = 1, decimals = 0.0001, pointer = "%smoothingY"})
 
-local silentaimCombat = pageCombat:MultiSection({ Sections = "Silent Aim", Side = "Right" })
+local silentaimCombat = pageCombat:MultiSection({ Sections = {"Silent Aim"}, Side = "Right" })
 silentaimCombat:Toggle({ Name = "Enabled", Pointer = "!enabled" })
 silentaimCombat:Slider({ Name = "FOV", min = 10, max = 500, def = 500, pointer = "!radius"})
 silentaimCombat:Dropdown({ Name = "Hit Point", Options = {"Head", "HumanoidRootPart", "UpperTorso", "LowerTorso" }, Default = "HumanoidRootPart", Pointer = "!aimpart" })
@@ -6614,7 +6614,7 @@ silentaimCombat:Textbox({Text = "0.15", PlaceHolder = "Prediction", Pointer = "!
 
 local targetaim__prediction = 0
 local targetaim__autoprediction = 0
-local targetaimCombat = pageCombat:MultiSection({ Sections = "Target Aim", Side = "Right" })
+local targetaimCombat = pageCombat:MultiSection({ Sections = {"Target Aim"}, Side = "Right" })
 targetaimCombat:Toggle({ Name = "Enabled", Pointer = "#enabled" }):Keybind({ Default = Enum.KeyCode.E, Pointer = "#keybind", Mode = "Toggle" })
 targetaimCombat:Slider({ Name = "FOV", min = 10, max = 500, def = 500, pointer = "#radius"})
 targetaimCombat:Dropdown({ Name = "Hit Point", Options = {"Head", "UpperTorso", "HumanoidRootPart", "LowerTorso" }, Default = "HumanoidRootPart", Pointer = "#aimpart" })
@@ -6835,7 +6835,7 @@ worldVisuals:Toggle({ Name = "Time of Day", Pointer = ")timeofday", callback = f
     end
 end})
 worldVisuals:Slider({ Name = "Time of Day (hr)", min = 1, max = 24, def = 12, suffix = "hr", pointer = ")timeofday)" })
-combatVisuals:Label({ Name = "Aim Assist" })
+combatVisuals:Label({ Name = "Aim Assist (for legit niggers)" })
 
 local aimassistShowFOV = combatVisuals:Toggle({ Name = "Show FOV", Pointer = "%showfov", callback = function(state)
     aimassist__drawing["inner"].Visible = state
@@ -7034,7 +7034,8 @@ local pageAntiAim = libary:Page({ Name = "Anti-Aim" })
 local optionsAntiAim = pageAntiAim:MultiSection({ Sections = {"Anti-Aim"}, Side = "Left", Size = 280 })
 
 local pageMisc = library:Page({ Name = "Misc" })
-local movementMisc, chatMisc = pageMisc:MultiSection({ Sections = {"Movement", "Chat"}, Side = "Left", Size = 280 })
+local movementMisc, chatMisc = pageMisc:MultiSection({ Section
+		s = {"Movement", "Chat"}, Side = "Left", Size = 280 })
 local flytoggle = movementMisc:Toggle({Name = "Fly", Default = false, Pointer = "flyenabled"})
 flytoggle:Keybind({Default = nil,Pointer = "flykeybind", Mode = "Toggle"})
 movementMisc:Dropdown({Name = "Fly Mode", Options = {"Always", "Keybind"}, Default = "Always", Pointer = "flymode"})
