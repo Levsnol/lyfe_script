@@ -6608,7 +6608,7 @@ silentaimCombat:Toggle({ Name = "Closest Part", Default = false, Pointer = "!clo
 silentaimCombat:Toggle({ Name = "Anti-Ground Shot", Default = false, Pointer = "!antigroundshot" })
 silentaimCombat:Toggle({ Name = "Anti-Curve", Default = false, Pointer = "!anticurve" })
 silentaimCombat:Toggle({ Name = "Wall Check", Default = false, Pointer = "!wallcheck" })
-silentaimCombat:Toggle({ Name = "Auto Resolver", Default = false, Pointer = "!autoresolver" })
+--silentaimCombat:Toggle({ Name = "Auto Resolver", Default = false, Pointer = "!autoresolver" })
 silentaimCombat:Label({ Name = "Prediction" })
 silentaimCombat:Textbox({Text = "0.15", PlaceHolder = "Prediction", Pointer = "!prediction", Middle = false, ResetOnFocus = false})
 
