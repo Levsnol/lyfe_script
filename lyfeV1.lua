@@ -6376,7 +6376,7 @@ spawn(LPH_JIT_ULTRA(function()
                             end
                             if esp.name then
                                 drawingInstances.Name.Visible = true
-                                drawingInstances.Name.Text = string.format("<%s>", character.Humanoid.DisplayName)
+                                drawingInstances.Name.Text = string.format("%s", character.Humanoid.DisplayName)
                                 drawingInstances.Name.Position = Vector2.new(boxSize.X / 2 + boxPosition.X, boxPosition.Y - 16)
                                 drawingInstances.Name.Color = esp.namecolor
                                 drawingInstances.Name.OutlineColor = esp.nameoutline
@@ -6600,7 +6600,7 @@ aimassistCombat:Dropdown({ Name = "Movement Type", Options = { "Camera", "Mouse"
 aimassistCombat:Slider({ Name = "Smoothing X", min = 0.0001, max = 1, def = 1, decimals = 0.0001, pointer = "%smoothingX"})
 aimassistCombat:Slider({ Name = "Smoothing Y", min = 0.0001, max = 1, def = 1, decimals = 0.0001, pointer = "%smoothingY"})
 
-local silentaimCombat = pageCombat:InDevSection({ Name = "Silent Aim", Side = "Right" })
+local silentaimCombat = pageCombat:Section({ Name = "Silent Aim", Side = "Right" })
 silentaimCombat:Toggle({ Name = "Enabled", Pointer = "!enabled" })
 silentaimCombat:Slider({ Name = "FOV", min = 10, max = 500, def = 500, pointer = "!radius"})
 silentaimCombat:Dropdown({ Name = "Hit Point", Options = {"Head", "HumanoidRootPart", "UpperTorso", "LowerTorso" }, Default = "HumanoidRootPart", Pointer = "!aimpart" })
@@ -6608,13 +6608,13 @@ silentaimCombat:Toggle({ Name = "Closest Part", Default = false, Pointer = "!clo
 silentaimCombat:Toggle({ Name = "Anti-Ground Shot", Default = false, Pointer = "!antigroundshot" })
 silentaimCombat:Toggle({ Name = "Anti-Curve", Default = false, Pointer = "!anticurve" })
 silentaimCombat:Toggle({ Name = "Wall Check", Default = false, Pointer = "!wallcheck" })
---silentaimCombat:Toggle({ Name = "Auto Resolver", Default = false, Pointer = "!autoresolver" })
+silentaimCombat:Toggle({ Name = "Auto Resolver", Default = false, Pointer = "!autoresolver" })
 silentaimCombat:Label({ Name = "Prediction" })
 silentaimCombat:Textbox({Text = "0.15", PlaceHolder = "Prediction", Pointer = "!prediction", Middle = false, ResetOnFocus = false})
 
 local targetaim__prediction = 0
 local targetaim__autoprediction = 0
-local targetaimCombat = pageCombat:InDevSection({ Name = "Target Aim", Side = "Right" })
+local targetaimCombat = pageCombat:Section({ Name = "Target Aim", Side = "Right" })
 targetaimCombat:Toggle({ Name = "Enabled", Pointer = "#enabled" }):Keybind({ Default = Enum.KeyCode.E, Pointer = "#keybind", Mode = "Toggle" })
 targetaimCombat:Slider({ Name = "FOV", min = 10, max = 500, def = 500, pointer = "#radius"})
 targetaimCombat:Dropdown({ Name = "Hit Point", Options = {"Head", "UpperTorso", "HumanoidRootPart", "LowerTorso" }, Default = "HumanoidRootPart", Pointer = "#aimpart" })
@@ -7029,6 +7029,9 @@ local visualizepos__ = spectatorVisuals:Toggle({ Name = "Visualize Positions", P
 visualizepos__:Colorpicker({ Info = "Color", Default = Color3.fromRGB(153,0.3,255), Pointer = "spectatorvisualColor"})
 spectatorVisuals:Dropdown({ Name = "Players", Options = get__players1(), Default = "", Pointer = "spectatorPlayer" })
 spectatorVisuals:Label({ Name = "Player Options will appear/update\nwhen Spectator is Enabled" })
+
+local pageAntiAim = libary:Page({ Name = "Anti-Aim" })
+local optionsAntiAim = pageMisc:MultiSection({ Sections = {"Anti-Aim"}, Side = "Left" })
 
 local pageMisc = library:Page({ Name = "Misc" })
 local movementMisc, chatMisc = pageMisc:MultiSection({ Sections = {"Movement", "Chat"}, Side = "Left", Size = 280 })
