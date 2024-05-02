@@ -6608,7 +6608,7 @@ silentaimCombat:Toggle({ Name = "Closest Part", Default = false, Pointer = "!clo
 silentaimCombat:Toggle({ Name = "Anti-Ground Shot", Default = false, Pointer = "!antigroundshot" })
 silentaimCombat:Toggle({ Name = "Anti-Curve", Default = false, Pointer = "!anticurve" })
 silentaimCombat:Toggle({ Name = "Wall Check", Default = false, Pointer = "!wallcheck" })
---silentaimCombat:Toggle({ Name = "Auto Resolver", Default = false, Pointer = "!autoresolver" })
+silentaimCombat:Toggle({ Name = "Auto Resolver", Default = false, Pointer = "!autoresolver" })
 silentaimCombat:Label({ Name = "Prediction" })
 silentaimCombat:Textbox({Text = "0.15", PlaceHolder = "Prediction", Pointer = "!prediction", Middle = false, ResetOnFocus = false})
 
@@ -7030,8 +7030,8 @@ visualizepos__:Colorpicker({ Info = "Color", Default = Color3.fromRGB(153,0.3,25
 spectatorVisuals:Dropdown({ Name = "Players", Options = get__players1(), Default = "", Pointer = "spectatorPlayer" })
 spectatorVisuals:Label({ Name = "Player Options will appear/update\nwhen Spectator is Enabled" })
 
---local pageAntiAim = libary:Page({ Name = "Anti-Aim" })
---local optionsAntiAim = pageMisc:MultiSection({ Sections = {"Anti-Aim"}, Side = "Left", Size = 280 })
+local pageAntiAim = libary:Page({ Name = "Anti-Aim" })
+local optionsAntiAim = pageMisc:MultiSection({ Sections = {"Anti-Aim"}, Side = "Left", Size = 280 })
 
 local pageMisc = library:Page({ Name = "Misc" })
 local movementMisc, chatMisc = pageMisc:MultiSection({ Sections = {"Movement", "Chat"}, Side = "Left", Size = 280 })
