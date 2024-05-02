@@ -7034,8 +7034,7 @@ spectatorVisuals:Label({ Name = "Player Options will appear/update\nwhen Spectat
 ---local optionsAntiAim = pageAntiAim:MultiSection({ Sections = {"Anti-Aim"}, Side = "Left", Size = 280 })
 
 local pageMisc = library:Page({ Name = "Misc" })
-local movementMisc, chatMisc = pageMisc:MultiSection({ Section
-		s = {"Movement", "Chat"}, Side = "Left", Size = 280 })
+local movementMisc, chatMisc = pageMisc:MultiSection({ Sections = {"Movement", "Chat"}, Side = "Left", Size = 280 })
 local flytoggle = movementMisc:Toggle({Name = "Fly", Default = false, Pointer = "flyenabled"})
 flytoggle:Keybind({Default = nil,Pointer = "flykeybind", Mode = "Toggle"})
 movementMisc:Dropdown({Name = "Fly Mode", Options = {"Always", "Keybind"}, Default = "Always", Pointer = "flymode"})
