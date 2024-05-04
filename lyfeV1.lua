@@ -7030,8 +7030,8 @@ visualizepos__:Colorpicker({ Info = "Color", Default = Color3.fromRGB(153,0.3,25
 spectatorVisuals:Dropdown({ Name = "Players", Options = get__players1(), Default = "", Pointer = "spectatorPlayer" })
 spectatorVisuals:Label({ Name = "Player Options will appear/update\nwhen Spectator is Enabled" })
 
-local pageAntiAim = libary:Page({ Name = "Anti-Aim" })
-local optionsAntiAim = pageAntiAim:MultiSection({ Sections = {"Anti-Aim"}, Side = "Left", Size = 280 })
+---local pageAntiAim = libary:Page({ Name = "Anti-Aim" })
+---local optionsAntiAim = pageAntiAim:MultiSection({ Sections = {"Anti-Aim"}, Side = "Left", Size = 280 })
 
 local pageMisc = library:Page({ Name = "Misc" })
 local movementMisc, chatMisc = pageMisc:MultiSection({ Sections = {"Movement", "Chat"}, Side = "Left", Size = 280 })
