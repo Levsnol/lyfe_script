@@ -1,9 +1,3 @@
---[[
-if getgenv().azureloaded then
-    return
-end
-
-getgenv().azureloaded = true]]
 
 local loadtick = tick()
 
